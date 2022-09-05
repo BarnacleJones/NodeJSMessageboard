@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  header.page-header.text-center
+    h1 #{title}
+  div.container.text-center
+    
+    hr
+    //-can create variables
+    //- - var messages = messages
+    each n in messages    
+      h4 User: #{n.user}  
+      p Message: #{n.text}
+      p Time: #{n.added}
+      hr
+    a(href="/new") Create new message 
+

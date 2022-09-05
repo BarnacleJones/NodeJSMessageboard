@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    h1.text-center #{title}
+    h4 Put your message here:
+    form.mb-3(action="/new", method="post")  
+        br
+        br
+        label.form-label(for="nameField") Name:    
+        input(type="text", name="nameField")
+        br
+        br
+        label.form-label(for="messageField") Message: 
+        input(type="text", name="messageField")
+        br
+        br
+        label.form-label(for="button")
+        input.btn.btn-primary(type="submit", value="Submit") 
+         
